@@ -14,6 +14,7 @@ html, body
 {
     position:relative;
     height:auto;
+    min-height:100vh;
     width:100%;
     margin:0;
     padding:0;
@@ -626,6 +627,28 @@ html, body
     background:linear-gradient(#163369, #1f4893 80%);
     border-top:2px solid gray;
     transition:background 1s ease-in-out;
+}
+#CreditLine
+{
+    position:absolute;
+    color:white;
+    bottom:0;
+    width:99.4%;
+    height:auto;
+    line-height:30px;
+    font-size: 10px;
+    font-family: 'Exo', sans-serif;
+    text-align-last: right;
+    margin-right:0.6%;
+}
+#CreditLine a
+{
+    color:white;
+    text-decoration: underline;
+}
+#CreditLine a:hover
+{
+    color:gray;
 }
 
 /* Slick Override */
