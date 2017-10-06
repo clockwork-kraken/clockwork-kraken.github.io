@@ -515,8 +515,8 @@ html, body
     width:80%;
     margin:0 9% 0 9%;
     font-size:0;
-    text-align:justify;
-    text-align-last:justify;
+    text-align:left;
+    text-align-last:left;
     padding:40px 1% 40px 1%;
 }
 #Contact h2
@@ -866,7 +866,7 @@ html, body
 {
     .speech-bubble p
     {
-        font-size:14px;
+        font-size:20px;
         margin-top:9%;
     }
     .speech-bubble p img
