@@ -142,8 +142,27 @@ $(document).ready(function(){
         }
     });
 
+    $("#HomeLink").click(function(){
+        $('html, body').animate({
+            scrollTop: $("body").offset().top
+        }, 500);
+        $('#MainImg').slick('slickGoTo', 0);
+    });
+    $("#StudioLink").click(function(){
+        $('html, body').animate({
+            scrollTop: $("body").offset().top
+        }, 500);
+        $('#MainImg').slick('slickGoTo', 1);
+    });
+    $("#ContactLink").click(function(){
+        $('#MainImg').slick('slickGoTo', 0);
+        $('html, body').delay(500).animate({
+            scrollTop: $("#Contact").offset().top
+        }, 1000);
+    });
+
     /*
-    Remove the oad overlay either when the page is fully 
+    Remove the load overlay either when the page is fully 
     loaded or after 6 seconds if for some reason it isnt 
     gone already.
     */

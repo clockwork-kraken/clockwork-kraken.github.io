@@ -14,7 +14,6 @@ html, body
 {
     position:relative;
     height:auto;
-    min-height:100vh;
     width:100%;
     margin:0;
     padding:0;
@@ -125,11 +124,16 @@ html, body
     border-left:1.5px solid white;
     margin:6px 0 6px 0;
 }
+.main-links-list li:last-of-type a
+{
+    color:yellow;
+}
 .main-links-list a
 {
     color:white;
     /*color:#FFE2AB;*/
     text-decoration:none;
+    cursor:pointer;
 }
 #MainNav ul a:hover
 {
@@ -515,8 +519,8 @@ html, body
     width:80%;
     margin:0 9% 0 9%;
     font-size:0;
-    text-align:left;
-    text-align-last:left;
+    text-align:justify;
+    text-align-last:justify;
     padding:40px 1% 40px 1%;
 }
 #Contact h2
@@ -602,6 +606,26 @@ html, body
 {
     top:360px;
 }
+#SocialMedia form
+{
+    margin-top:30px;
+    line-height:25px;
+}
+#SocialMedia form input[type="text"]
+{
+    position:relative;
+    display:inline-block;
+    left:10%;
+    width:55%;
+}
+#SocialMedia form input[type="submit"]
+{
+    position:relative;
+    display:inline-block;
+    left:10%;
+    text-align-last:center;
+    font-family:'Orbitron', sans-serif;
+}
 .contact-right span
 {
     position:relative;
@@ -610,7 +634,7 @@ html, body
     left:10%;
     display:block;
 }
-#Contact input[type="submit"]
+#MessageForm input[type="submit"]
 {
     position:relative;
     height:30px;
@@ -628,25 +652,21 @@ html, body
     border-top:2px solid gray;
     transition:background 1s ease-in-out;
 }
-#CreditLine
+#ByLine
 {
     position:absolute;
     color:white;
+    font-size:9px;
+    right:0;
     bottom:0;
-    width:99.4%;
-    height:auto;
-    line-height:30px;
-    font-size: 10px;
-    font-family: 'Exo', sans-serif;
-    text-align-last: right;
-    margin-right:0.6%;
+    font-family:'Orbitron', sans-serif;
+    margin:0 25px 12px 0;
 }
-#CreditLine a
+#ByLine a
 {
     color:white;
-    text-decoration: underline;
 }
-#CreditLine a:hover
+#ByLine a:hover
 {
     color:gray;
 }
@@ -866,7 +886,7 @@ html, body
 {
     .speech-bubble p
     {
-        font-size:20px;
+        font-size:14px;
         margin-top:9%;
     }
     .speech-bubble p img
