@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron'); /*'Orbitron', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Exo'); /*font-family: 'Exo', sans-serif;*/
+
+@font-face {
+    src:url("assets/fonts/Freshman.ttf");
+    font-family:'freshman';
+}
+@font-face {
+    src:url("assets/fonts/theboldfont.ttf");
+    font-family:'thebold';
+}
+
+html, body
+{
+    position:relative;
+    height:auto;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-color:#352041;
+    z-index:-9;
+    overflow-x:hidden;
+}
+#MainNav
+{
+    position:fixed;
+    width:100%;
+    height:auto;
+    top:0;
+    left:0;
+    /*background:#163369;*/
+    background:#214B9B;
+    z-index:2000;
+    text-align:justify;
+    text-align-last:justify;
+    font-size:0;
+    padding:2px 0 2px 0;
+    transition:background, 0.4s ease-in-out;
+}
+.logo
+{
+    position:absolute;
+    height:0px;
+    width:0px;
+    left:0;
+    top:0;
+    border-width:46px 56px 46px 56px;
+    border-color:#214B9B transparent transparent #214B9B;
+    border-style:solid;
+    text-decoration:none;
+    transition:border-color 0.4s ease-in-out;
+}
+.logo img
+{
+    position:absolute;
+    left:-48px;
+    top:-36px;
+    height:64px;
+    width:64px;
+}
+#MainNav h3
+{
+    position:relative;
+    left:72px;
+    font-size:36px;
+    line-height:44px;
+    font-family:'thebold', sans-serif;
+    color:white;
+    vertical-align:top;
+    margin:0 0 0 10px;
+    display:inline-block;
+}
+.main-social-list
+{
+    position:absolute;
+    width:auto;
+    height:auto;
+    padding:0;
+    top:80px;
+    left:15px;
+}
+.main-social-list li
+{
+    position:relative;
+    height:50px;
+    width:50px;
+    margin:8px 0px 8px 0px;
+    display:block;
+}
+.main-social-list a
+{
+    height:100%;
+    width:auto;
+}
+.main-social-list img
+{
+    height:100%;
+    width:auto;
+    opacity:0.92;
+}
+.main-links-list
+{
+    position:relative;
+    height:100%;
+    width:auto;
+    list-style:None;
+    text-align-last: justify;
+    display:inline-block;
+    vertical-align:middle;
+    margin:0;
+    padding:0;
+    margin-right:12px;
+    transition:height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+.main-links-list li
+{
+    height:auto;
+    line-height:32px;
+    font-size:22px;
+    display:inline-block;
+    vertical-align:top;
+    padding:0 21px 0 21px;
+    font-family:'thebold', sans-serif;
+    border-left:1.5px solid white;
+    margin:6px 0 6px 0;
+}
+.main-links-list li:last-of-type a
+{
+    color:yellow;
+}
+.main-links-list a
+{
+    color:white;
+    /*color:#FFE2AB;*/
+    text-decoration:none;
+    cursor:pointer;
+}
+#MainNav ul a:hover
+{
+    text-decoration:underline;
+}
+#MainNav ul li:first-of-type
+{
+    border-left:none;
+}
+#MenuExpander
+{
+    position:relative;
+    height:0px;
+    width:100%;
+}
+#MenuExpander div
+{
+    position:relative;
+    top:0;
+    height:100%;
+    width:100%;
+    background-image:url("assets/images/arrow.png");
+    background-position:center center;
+    background-size:auto 65%;
+    background-repeat:no-repeat;
+    animation-name:bob-up-down;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+@keyframes bob-up-down
+{
+    0%
+    {
+        top:0;
+    }
+    50%
+    {
+        top:3px;
+    }
+    100%
+    {
+        top:0px;
+    }
+}
+#MainImg
+{
+    position:relative;
+    height:calc(100vh - 45px);
+    width:100%;
+    margin-top:45px;
+    background:black;
+    overflow:hidden;
+}
+#Game
+{
+    position:relative;
+    height:100%;
+    width:100%;
+    background:#214B9B;
+    /*
+    background-image:url("assets/images/forest_bg_banner_long_no_logo.png");
+    background-position:center center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    */
+}
+#GameLogo
+{
+    position:relative;
+    top:15%;
+    height:50%;
+    width:auto;
+    background-image:url("assets/images/DC_logo.png");  
+    background-position:center center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    filter: drop-shadow(8px 8px 8px #262626);
+}
+#Trailer
+{
+    position:absolute;
+    width:100%;
+    height:auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#ContactBox
+{
+    position:relative;
+    top:25%;
+    width:100%;
+    height:auto;         
+}
+#ContactBox h3
+{
+    position: relative;
+    font-family: 'Exo', sans-serif;
+    font-size: 24px;
+    color: white;
+    width:100%;
+    text-align: center;
+    margin:0;
+    text-shadow: 2px 2px #262626;
+}
+#ContactBox input[type="text"]
+{
+    position:relative;
+    width:360px;
+    max-width:100%;
+    height:26px;
+    margin-top:15px;
+    left:calc(50% - 180px);
+    box-shadow:5px 3px 2px 1px #262626;
+    text-indent: 4px;
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    font-size:18px;
+    border-radius: 6px;
+}
+#Game a
+{
+    position:absolute;
+    width:200px;
+    height:60px;
+    right:calc(50% - 103px);
+    bottom:20px;
+    display:block;
+    background:#214B9B;
+    border:3px solid #122954;
+    text-align:center;
+    line-height:60px;
+    font-family: 'Exo', sans-serif;
+    font-weight:600;
+    text-decoration:none;
+    color:#FFE2AB;
+    transition:color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+#Game a:hover
+{
+    background:#FFE2AB;
+    border:3px solid #122954;
+    color:#214B9B;
+
+}
+#Studio
+{
+    height:700px;
+    width:100%;
+    background-image:url("assets/images/team.jpg");
+    background-position:center center;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    text-align:center;
+}
+#Studio img
+{
+    position:relative;
+    height:70%;
+    width:auto;
+    display:inline-block;
+    top:15%;
+    filter:drop-shadow(15px 15px 5px black);
+}
+
+#GameContainer
+{
+    position:relative;
+    max-height:5000px;
+    width:100%;
+    overflow:hidden;
+    transition:max-height 0.7s ease-in-out;
+    background-image:url("assets/images/blue_bg.png");
+    background-repeat:repeat;
+    background-size:1920px 1080px;
+    background-position:top left;
+    z-index: -2;
+}
+
+/*MOBILE RESPONSIVENESS*/
+/*Header Bar*/
+@media screen and (max-width: 1083px)
+{
+    #MainNav
+    {
+        text-align:center;
+        text-align-last:center;  
+    }
+    #MainNav h3
+    {
+        left:0;
+    }
+}
+@media screen and (max-width: 850px)
+{
+    #MessageForm
+    {
+        width:calc(100% - 90px - 4px);
+    }
+    .contact-right
+    {
+        position:relative;
+        width:calc(100% - 4px);
+        top:0;
+    }
+    #Address
+    {
+        top:0;
+    }
+    #Email
+    {
+        top:0;
+    }
+    #SocialMedia
+    {
+        top:0;
+    }
+}
+@media screen and (max-width: 730px)
+{
+    #MainNav 
+    {
+        position:relative;
+    }
+    .main-links-list
+    {
+        height:0;
+        overflow:hidden;
+        padding:0 !important;
+    }
+    #MenuExpander
+    {
+        height:40px;
+    }
+    .main-social-list
+    {
+        position:relative;
+        top:0;
+        left:0;
+    }
+    .main-social-list li
+    {
+        width:75px !important;
+        margin:0;
+    }
+    .logo
+    {
+        position:relative;
+        display:inline-block;
+        vertical-align:middle;
+    }
+    .logo img
+    {
+        display:inline-block;
+        text-align:center;
+        text-align-last:center;
+    }
+    #MainNav h3
+    {
+        display:inline-block;
+        vertical-align:middle;
+        margin-bottom:20px;
+    }
+    #MainNav ul
+    {
+        width:100%;
+        display:block;
+        padding-bottom:20px;
+    }
+    #MainNav ul li
+    {
+        width:50%;
+        text-align:center;
+        text-align-last:center;
+        padding:0;
+        display:inline-block;
+        border:none;
+    }
+    #MainImg
+    {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 560px)
+{
+    .speech-bubble p
+    {
+        font-size:14px;
+        margin-top:9%;
+    }
+    .speech-bubble p img
+    {
+        height:20px;
+        width:20px;
+        bottom:2px;
+    }
+}
+@media screen and (max-width: 531px)
+{
+    .logo
+    {
+        left:16px;
+    }
+    #Game a
+    {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    section h2
+    {
+        font-size:30px !important;
+        line-height:30px !important;
+        text-align:center !important;
+        text-align-last:center !important;
+    }
+    section h3
+    {
+        text-align-last:center !important;
+    }
+    section > p
+    {
+        text-align:center !important;
+        text-align-last:center !important;
+    }
+}
+
+#LoadingOverlay
+{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    background:#533267;
+    z-index:2500;
+    opacity:1;
+    transition:opacity 0.6s linear;
+}
+.loading-logo-outer
+{
+    position:absolute;
+    height:120px;
+    width:120px;
+    left:calc(50% - 60px);
+    top:calc(50% - 60px);
+    background-image:url("assets/images/logo-bg.png");
+    background-position:center center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.loading-logo-inner
+{
+    position:absolute;
+    height:120px;
+    width:120px;
+    left:calc(50% - 60px);
+    top:calc(50% - 60px);
+    background-image:url("assets/images/logo-fg.png");
+    background-position:center center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
