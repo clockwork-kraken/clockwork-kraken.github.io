@@ -187,13 +187,13 @@ html, body
     margin-top:45px;
     background:black;
     overflow:hidden;
+    background:#214B9B;
 }
 #Game
 {
     position:relative;
     height:100%;
     width:100%;
-    background:#214B9B;
     /*
     background-image:url("assets/images/forest_bg_banner_long_no_logo.png");
     background-position:center center;
@@ -237,9 +237,9 @@ html, body
     font-family: 'Exo', sans-serif;
     font-size: 24px;
     color: white;
-    width:100%;
+    width:calc(100% - 40px);
     text-align: center;
-    margin:0;
+    margin:0 20px 0 20px;
     text-shadow: 2px 2px #262626;
 }
 #mc_embed_signup input[type="email"]
@@ -273,67 +273,37 @@ html, body
     font-size:18px;
     border-radius: 2px;
 }
-#Game a
-{
-    position:absolute;
-    width:200px;
-    height:60px;
-    right:calc(50% - 103px);
-    bottom:20px;
-    display:block;
-    background:#214B9B;
-    border:3px solid #122954;
-    text-align:center;
-    line-height:60px;
-    font-family: 'Exo', sans-serif;
-    font-weight:600;
-    text-decoration:none;
-    color:#FFE2AB;
-    transition:color 0.3s ease-in-out, background 0.3s ease-in-out;
-}
-#Game a:hover
-{
-    background:#FFE2AB;
-    border:3px solid #122954;
-    color:#214B9B;
-
-}
-#Studio
-{
-    height:700px;
-    width:100%;
-    background-image:url("assets/images/team.jpg");
-    background-position:center center;
-    background-size:100% auto;
-    background-repeat:no-repeat;
-    text-align:center;
-}
-#Studio img
-{
-    position:relative;
-    height:70%;
-    width:auto;
-    display:inline-block;
-    top:15%;
-    filter:drop-shadow(15px 15px 5px black);
-}
-
-#GameContainer
-{
-    position:relative;
-    max-height:5000px;
-    width:100%;
-    overflow:hidden;
-    transition:max-height 0.7s ease-in-out;
-    background-image:url("assets/images/blue_bg.png");
-    background-repeat:repeat;
-    background-size:1920px 1080px;
-    background-position:top left;
-    z-index: -2;
-}
 
 /*MOBILE RESPONSIVENESS*/
-/*Header Bar*/
+@media screen and (max-width: 1225px)
+{
+    #MainImg
+    {
+        padding-bottom:0px;
+    }
+    #Trailer
+    {
+        position:relative;
+        transform:translateY(0%);
+        left:0%;
+        width:100%;
+        height:auto;
+    }
+    #GameLogo
+    {
+        position:absolute;
+        width:100%;
+        top:10%;
+        height:300px;
+    }
+    #mc_embed_signup
+    {
+        position:relative;
+        top:5%;
+        width:100%;
+        height:auto;         
+    }
+}
 @media screen and (max-width: 1083px)
 {
     #MainNav
@@ -344,6 +314,30 @@ html, body
     #MainNav h3
     {
         left:0;
+    }
+}
+@media screen and (max-width: 985px)
+{
+    #MainImg
+    {
+        margin-top:90px;
+    }
+    .main-social-list
+    {
+        top:125px;
+    }
+}
+@media screen and (max-width: 875px)
+{
+    #GameLogo
+    {
+        position:absolute;
+        top:10%;
+        height:200px;
+    }
+    #mc_embed_signup label
+    {
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 850px)
@@ -436,6 +430,31 @@ html, body
         margin-top: 0;
     }
 }
+@media screen and (max-width: 600px)
+{
+    #mc_embed_signup input[type="email"]
+    {
+        display: block;
+        width:260px;
+        height:32px;
+        margin-left:0;
+        left:calc(50% - 130px);
+        text-indent: 4px;
+        font-size:14px;
+    }
+    #mc_embed_signup input[type="submit"]
+    {
+        display: block;
+        width:130px;
+        height:32px;
+        margin-left:0;
+        margin-top:20px;
+        left:calc(50% - 65px);
+        text-indent: 4px;
+        font-size:14px;
+    }
+}
+
 @media screen and (max-width: 560px)
 {
     .speech-bubble p
@@ -461,7 +480,15 @@ html, body
         display:none;
     }
 }
-
+@media screen and (max-width: 500px)
+{
+    #GameLogo
+    {
+        position:absolute;
+        top:10%;
+        height:120px;
+    }
+}
 @media screen and (max-width: 420px)
 {
     section h2
