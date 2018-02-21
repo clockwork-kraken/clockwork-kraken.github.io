@@ -189,6 +189,28 @@ html, body
     overflow:hidden;
     background:#214B9B;
 }
+#LeftBG
+{
+    position:absolute;
+    left:0;
+    height:100%;
+    width:100%;
+    background-image:url("assets/images/left-bg.png");
+    background-position:left center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
+#RightBG
+{
+    position:absolute;
+    right:0;
+    height:100%;
+    width:100%;
+    background-image:url("assets/images/right-bg.png");
+    background-position:right center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
 #Game
 {
     position:relative;
@@ -302,6 +324,14 @@ html, body
         top:5%;
         width:100%;
         height:auto;         
+    }
+    #LeftBG
+    {
+        background: none;
+    }
+    #RightBG
+    {
+        background: none;
     }
 }
 @media screen and (max-width: 1083px)
