@@ -182,584 +182,158 @@ html, body
 #MainImg
 {
     position:relative;
-    height:700px;
+    height:calc(100vh - 45px);
     width:100%;
     margin-top:45px;
     background:black;
+    overflow:hidden;
+    background:#214B9B;
+}
+#LeftBG
+{
+    position:absolute;
+    left:0;
+    height:100%;
+    width:100%;
+    background-image:url("assets/images/left-bg.png");
+    background-position:left center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
+#RightBG
+{
+    position:absolute;
+    right:0;
+    height:100%;
+    width:100%;
+    background-image:url("assets/images/right-bg.png");
+    background-position:right center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
 }
 #Game
 {
     position:relative;
-    height:700px;
+    height:100%;
     width:100%;
-    background-image:url("assets/images/forest_bg_banner_long.png");
+    /*
+    background-image:url("assets/images/forest_bg_banner_long_no_logo.png");
     background-position:center center;
     background-size:auto 100%;
     background-repeat:no-repeat;
+    */
 }
-#Game a
-{
-    position:absolute;
-    width:200px;
-    height:60px;
-    right:calc(50% - 103px);
-    bottom:20px;
-    display:block;
-    background:#214B9B;
-    border:3px solid #122954;
-    text-align:center;
-    line-height:60px;
-    font-family: 'Exo', sans-serif;
-    font-weight:600;
-    text-decoration:none;
-    color:#FFE2AB;
-    transition:color 0.3s ease-in-out, background 0.3s ease-in-out;
-}
-#Game a:hover
-{
-    background:#FFE2AB;
-    border:3px solid #122954;
-    color:#214B9B;
-
-}
-#Studio
-{
-    height:700px;
-    width:100%;
-    background-image:url("assets/images/team.jpg");
-    background-position:center center;
-    background-size:100% auto;
-    background-repeat:no-repeat;
-    text-align:center;
-}
-#Studio img
+#GameLogo
 {
     position:relative;
-    height:70%;
-    width:auto;
-    display:inline-block;
     top:15%;
-    filter:drop-shadow(15px 15px 5px black);
-}
-
-#GameContainer
-{
-    position:relative;
-    max-height:5000px;
-    width:100%;
-    overflow:hidden;
-    transition:max-height 0.7s ease-in-out;
-    background-image:url("assets/images/blue_bg.png");
-    background-repeat:repeat;
-    background-size:1920px 1080px;
-    background-position:top left;
-    z-index: -2;
-}
-
-/*CREW SECTION*/
-#TheCrew
-{
-    height:auto;
-    width:80%;
-    margin:0 9% 0 9%;
-    font-size:0;
-    text-align:justify;
-    text-align-last:justify;
-    padding:40px 1% 40px 1%;
-    border-bottom:3px solid rgba(150,150,150, 0.3);
-}
-#TheCrew h2
-{
-    height:36px;
-    font-family:'freshman', sans-serif;
-    font-size:40px;
-    line-height:40px;
-    color:#FFE2AB;
-    font-weight:400; 
-    text-align:left;
-    text-align-last: left;  
-    margin-top:0; 
-    margin-bottom:0px; 
-}
-#TheCrew h3
-{
-    height:40px;
-    font-size:18px;
-    line-height:40px;
-    color:#FFE2AB;
-    font-family: 'Exo', sans-serif;
-    text-align:left;
-    text-align-last: left; 
-    margin:0;
-}
-#TheCrew > p
-{
-    font-size:12px;
-    color:#FFE2AB;
-    text-align:left;
-    text-align-last:left;
-    font-family: 'Exo', sans-serif;
-    margin:15px 10px 40px 10px;
-}
-.speech-bubble
-{
-    position:relative;
-    height:200px;
-    width:100%;
-    border-radius:10px;
-    background-color:rgba(255,255,255,0.9);
-    margin-bottom:40px;
-}
-.speech-bubble p
-{
-    position:absolute;
-    width:90%;
-    margin:5% 5% 0 5%;
-    top:0;
-    left:0;
-    font-size:26px;
-    text-align:center;
-    text-align-last:center;
-    font-family: 'Exo', sans-serif;
-    line-height:auto;
-    opacity:0;
-    transition:opacity 0.3s ease-in-out;
-    color:#4d4d4d;
-}
-.speech-bubble p img
-{
-    position:relative;
-    height:32px;
-    width:32px;
-    display:inline-block;
-    vertical-align:middle;
-    bottom:4px;
-}
-.speech-bubble div
-{
-    position:absolute;
-    width:0px;
-    height:0px;
-    border-width:25px 35px 0 35px;
-    border-color:rgba(255,255,255,0.9) transparent transparent transparent;
-    border-style:solid;
-    bottom:-25px;
-    left:4%;
-    transition:left 0.6s ease-in-out;
-}
-#TheCrew > img
-{
-    width:20%;
-    max-width:160px;
-    height:auto;
-    display:inline-block;
-    vertical-align:top;
-    transition:opacity 0.4s ease-in-out, transform 0.2s ease-in-out;
-    opacity:0.5;
-    animation-name:grow-shrink;
-    animation-duration:1s;
-    animation-timing-function:linear;
-    animation-iteration-count:infinite;
-    transform:scale(1.0);
-}
-
-#TheCrew img:hover
-{
-    filter:drop-shadow(0px 5px 5px #f2e6d9);
-    opacity:1 !important;
-    transform:scale(1.05);
-}
-@keyframes grow-shrink
-{
-    0%{
-        transform:scale(1.0);
-    }
-    50%{
-        transform:scale(0.95);
-    }
-    100%{
-        transform:scale(1.0);
-    }
-}
-
-/*DUNGEON SECTION*/
-#TheDungeons
-{
-    height:auto;
-    width:80%;
-    margin:0 9% 0 9%;
-    font-size:0;
-    text-align:justify;
-    text-align-last:justify;
-    padding:40px 1% 60px 1%;
-    border-bottom:3px solid rgba(150,150,150, 0.3);
-}
-#TheDungeons h2
-{
-    height:36px;
-    font-family:'freshman', sans-serif;
-    font-size:40px;
-    line-height:40px;
-    color:#FFE2AB;
-    font-weight:400; 
-    text-align:left;
-    text-align-last: left;  
-    margin-top:0; 
-    margin-bottom:0px; 
-}
-#TheDungeons h3
-{
-    height:40px;
-    font-size:18px;
-    line-height:40px;
-    color:#FFE2AB;
-    font-family: 'Exo', sans-serif;
-    text-align:left;
-    text-align-last: left; 
-    margin:0;
-}
-#TheDungeons > p
-{
-    font-size:12px;
-    color:#FFE2AB;
-    text-align:left;
-    text-align-last:left;
-    font-family: 'Exo', sans-serif;
-    margin:15px 10px 40px 10px;
-}
-#DungeonCarousel
-{
-    
-}
-#TheDungeons img
-{
-    margin:15px;
-    border:3px solid #404040;
-}
-.carousel-video
-{   
-    position: relative;
-	padding-bottom: 10.6%;
-    margin:15px;
-	height: 0;
-    border:3px solid #404040;
-}
-.carousel-video iframe
-{
-    position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-
-/*GOAL SECTION*/
-#TheGoal
-{
-    position:relative;
-    height:auto;
-    width:80%;
-    margin:0 9% 0 9%;
-    font-size:0;
-    text-align:justify;
-    text-align-last:justify;
-    padding:40px 1% 40px 1%;
-    border-bottom:3px solid rgba(150,150,150, 0.3);
-    text-align:center;
-    text-align-last:center;
-}
-#TheGoal h2
-{
-    height:36px;
-    font-family:'freshman', sans-serif;
-    font-size:40px;
-    line-height:40px;
-    color:#FFE2AB;
-    font-weight:400; 
-    text-align:left;
-    text-align-last: left;  
-    margin-top:0; 
-    margin-bottom:0px; 
-}
-#TheGoal h3
-{
-    height:40px;
-    font-size:18px;
-    line-height:40px;
-    color:#FFE2AB;
-    font-family: 'Exo', sans-serif;
-    text-align:left;
-    text-align-last: left; 
-    margin:0;
-}
-#TheGoal > p
-{
-    font-size:12px;
-    color:#FFE2AB;
-    text-align:left;
-    text-align-last:left;
-    font-family: 'Exo', sans-serif;
-    margin:15px 10px 40px 10px;
-}
-#Treasure
-{
-    position:relative;
-    width:100%;
-    height:auto;
-    display:inline-block;
-}
-
-
-/*CONTACT SECTION*/
-#Contact
-{
-    position:relative;
-    height:auto;
-    width:80%;
-    margin:0 9% 0 9%;
-    font-size:0;
-    text-align:justify;
-    text-align-last:justify;
-    padding:40px 1% 40px 1%;
-}
-#Contact h2
-{
-    height:36px;
-    font-family:'freshman', sans-serif;
-    font-size:40px;
-    line-height:40px;
-    color:#FFE2AB;
-    font-weight:400; 
-    text-align:left;
-    text-align-last: left;  
-    margin-top:0; 
-    margin-bottom:0px; 
-}
-#Contact > p
-{
-    font-size:12px;
-    color:#FFE2AB;
-    text-align:left;
-    text-align-last:left;
-    font-family: 'Exo', sans-serif;
-    margin:15px 10px 40px 10px;
-}
-#ContactContainer
-{
-    position:relative;
-    height:auto;
-    width:100%;
-}
-#MessageForm
-{
-    position:relative;
-    width:calc(50% - 4px - 90px);
-    height:446px;
-    border:2px solid rgba(180,180,180,0.45);
-    padding:45px;
-    background:rgba(255,255,255,0.9);
-    
-}
-#MessageForm span
-{
-    display:block;
-    font-family:'Orbitron', sans-serif;
-    line-height:26px;
-    font-size:16px;
-}
-#MessageForm input[type="text"]
-{
-    width:100%;
-    border:1px solid #d9d9d9;
-}
-#MessageForm textarea
-{
-    display:block;
-    width:100%;
-    max-width:100%;
-    max-height:250px;
-    border:1px solid #d9d9d9;
-}
-.contact-right
-{
-    position:absolute;
-    width:calc(50% - 4px);
-    height:176px;
-    border:2px solid rgba(180,180,180,0.45);
-    right:0;
-    font-family:'Orbitron', sans-serif;
-    font-size:16px;
-    text-align:left;
-    text-align-last:left;
-    background:rgba(255,255,255,0.9);
-}
-#Address
-{
-    top:0;
-}
-#Email
-{
-    top:180px;
-}
-#SocialMedia
-{
-    top:360px;
-}
-#SocialMedia form
-{
-    margin-top:30px;
-    line-height:25px;
-}
-#SocialMedia form input[type="text"]
-{
-    position:relative;
-    display:inline-block;
-    left:10%;
-    width:55%;
-}
-#SocialMedia form input[type="submit"]
-{
-    position:relative;
-    display:inline-block;
-    left:10%;
-    text-align-last:center;
-    font-family:'Orbitron', sans-serif;
-}
-.contact-right span
-{
-    position:relative;
-    max-width:80%;
-    top:45%;
-    left:10%;
-    display:block;
-}
-#MessageForm input[type="submit"]
-{
-    position:relative;
-    height:30px;
-    width:80px;
-    left:calc(100% - 75px);
-    margin:10px 0 10px 0;
-    text-align-last:center;
-    font-family:'Orbitron', sans-serif;
-}
-#Footer
-{
-    height:120px;
-    width:100%;
-    background:linear-gradient(#163369, #1f4893 80%);
-    border-top:2px solid gray;
-    transition:background 1s ease-in-out;
-}
-#ByLine
-{
-    position:absolute;
-    color:white;
-    font-size:9px;
-    right:0;
-    bottom:0;
-    font-family:'Orbitron', sans-serif;
-    margin:0 25px 12px 0;
-}
-#ByLine a
-{
-    color:white;
-}
-#ByLine a:hover
-{
-    color:gray;
-}
-
-/* Slick Override */
-.slick-dots
-{
-    position:relative;
-    bottom:20px !important;
-}
-
-/*GOBLINS*/
-#Goblin1
-{
-    position:absolute;
-    height:375px;
+    height:50%;
     width:auto;
-    top:270px;
-    right:calc(-160px - 9%);
-    z-index:1000;
-    transform:rotate(-30deg);
+    background-image:url("assets/images/DC_logo.png");  
+    background-position:center center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    filter: drop-shadow(8px 8px 8px #262626);
 }
-#Goblin1 ~ div
+#Trailer
 {
     position:absolute;
-    height:45px;
-    width:290px;
-    top:320px;
-    right:0px;
-    z-index:999;
-    opacity:0;
-    transition:opacity 0.8s;
+    width:auto;
+    height:100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left:50%;
+    
 }
-#Goblin1:hover ~ div
-{
-    opacity:0.85;
-}
-#Goblin1 ~ div > div
+#mc_embed_signup
 {
     position:relative;
-    height:100%;
-    width:90%;
-    background:white;
-    border-radius:12px;
+    top:25%;
+    width:100%;
+    height:auto;         
 }
-#Goblin1 ~ div > div > p
+#mc_embed_signup label
 {
-    position:relative;
-    height:100%;
-    width:90%;
-    background:white;
-    border-radius:12px;
-    font-size:18px;
-    color:black;
-    padding:16px;
-    text-align:center;
-    text-align-last:center;
-    line-height:45px;
+    position: relative;
+    display: block;
     font-family: 'Exo', sans-serif;
-    font-weight:600;
-
+    font-size: 24px;
+    color: white;
+    width:calc(100% - 40px);
+    text-align: center;
+    margin:0 20px 0 20px;
+    text-shadow: 2px 2px #262626;
 }
-#Goblin1 ~ div > div > div
+#mc_embed_signup input[type="email"]
 {
-    position:absolute;
-    height:0;
-    width:0;
-    right:-18px;
-    top:42%;
-    border-color:transparent transparent transparent white;
-    border-style:solid;
-    border-width:20px 0 20px 12px;
+    position:relative;
+    display: inline-block;
+    width:360px;
+    max-width:100%;
+    height:26px;
+    margin-top:15px;
+    left:calc(50% - 270px);
+    box-shadow:5px 3px 2px 1px #262626;
+    text-indent: 4px;
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    font-size:18px;
+    border-radius: 6px;
 }
-
-.goblin:hover
+#mc_embed_signup input[type="submit"]
 {
-    filter:drop-shadow(-3px 1px 5px #f2e6d9);
-}
-
-#BackgroundColumn
-{
-    position:absolute;
-    width:88%;
-    height:100%;
-    z-index:-1;
-    top:0;
-    left:0;
-    background:rgba(50,50,50,0.4);
-    margin:0 6% 0 6%;
+    position:relative;
+    display: inline-block;
+    width:130px;
+    height:32px;
+    margin-left:15px;
+    left:calc(50% - 270px);
+    box-shadow:5px 3px 2px 1px #262626;
+    text-indent: 4px;
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    font-size:18px;
+    border-radius: 2px;
 }
 
 /*MOBILE RESPONSIVENESS*/
-/*Header Bar*/
+@media screen and (max-width: 1225px)
+{
+    #MainImg
+    {
+        padding-bottom:0px;
+    }
+    #Trailer
+    {
+        position:relative;
+        transform:translateY(0%);
+        left:0%;
+        width:100%;
+        height:auto;
+    }
+    #GameLogo
+    {
+        position:absolute;
+        width:100%;
+        top:10%;
+        height:300px;
+    }
+    #mc_embed_signup
+    {
+        position:relative;
+        top:5%;
+        width:100%;
+        height:auto;         
+    }
+    #LeftBG
+    {
+        background: none;
+    }
+    #RightBG
+    {
+        background: none;
+    }
+}
 @media screen and (max-width: 1083px)
 {
     #MainNav
@@ -772,24 +346,28 @@ html, body
         left:0;
     }
 }
-@media screen and (max-width:900px)
+@media screen and (max-width: 985px)
 {
     #MainImg
     {
-        height:340px;
         margin-top:90px;
     }
-    #MainImg div
+    .main-social-list
     {
-        height:340px;
+        top:125px;
     }
-    #Game a
+}
+@media screen and (max-width: 875px)
+{
+    #GameLogo
     {
-        display:none;
+        position:absolute;
+        top:10%;
+        height:200px;
     }
-    .goblin
+    #mc_embed_signup label
     {
-        display:none;
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 850px)
@@ -882,6 +460,31 @@ html, body
         margin-top: 0;
     }
 }
+@media screen and (max-width: 600px)
+{
+    #mc_embed_signup input[type="email"]
+    {
+        display: block;
+        width:260px;
+        height:32px;
+        margin-left:0;
+        left:calc(50% - 130px);
+        text-indent: 4px;
+        font-size:14px;
+    }
+    #mc_embed_signup input[type="submit"]
+    {
+        display: block;
+        width:130px;
+        height:32px;
+        margin-left:0;
+        margin-top:20px;
+        left:calc(50% - 60px);
+        text-indent: 4px;
+        font-size:14px;
+    }
+}
+
 @media screen and (max-width: 560px)
 {
     .speech-bubble p
@@ -907,18 +510,15 @@ html, body
         display:none;
     }
 }
-@media screen and (max-width: 470px)
+@media screen and (max-width: 500px)
 {
-    #MainImg
+    #GameLogo
     {
-        height:220px;
-    }
-    #MainImg div
-    {
-        height:220px;
+        position:absolute;
+        top:10%;
+        height:120px;
     }
 }
-
 @media screen and (max-width: 420px)
 {
     section h2

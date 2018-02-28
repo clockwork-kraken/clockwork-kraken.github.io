@@ -5,7 +5,7 @@ var PriestItem;
 var RogueItem;
 
 $(document).ready(function(){
-
+/*
     $('#MainImg').slick({
         dots: false,
         infinite: false,
@@ -29,7 +29,7 @@ $(document).ready(function(){
             $("#Footer").css("background", "linear-gradient(#533267, #352041 80%)");
         }
     });
-
+*/
     $('#DungeonCarousel').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
