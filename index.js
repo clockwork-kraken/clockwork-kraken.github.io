@@ -1,9 +1,9 @@
-
+/*
 var DwarfItem;
 var MageItem;
 var PriestItem;
 var RogueItem;
-
+*/
 $(document).ready(function(){
 /*
     $('#MainImg').slick({
@@ -30,6 +30,7 @@ $(document).ready(function(){
         }
     });
 */
+/*
     $('#DungeonCarousel').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -141,7 +142,7 @@ $(document).ready(function(){
             $(".main-links-list").height("152px");
         }
     });
-
+*/
     $("#HomeLink").click(function(){
         $('html, body').animate({
             scrollTop: $("body").offset().top
